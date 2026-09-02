@@ -43,11 +43,6 @@ function addLesson() {
 
     const row = document.createElement('tr');
     row.innerHTML = `
-    <td class="c1 lesson-name">${lessonName}</td>
-    <td class="c2 lesson-credit">${lessonCredit}</td>
-    <td class="c3 lesson-grade">
-        <input type="number" min="0" max="20" step="0.1" data-credit="${lessonCredit}">
-    </td>
     <td class="c4 delete-btn">
         <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
             xmlns="http://www.w3.org/2000/svg">
@@ -62,6 +57,11 @@ function addLesson() {
             <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#000000"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
+    </td>
+    <td class="c1 lesson-name">${lessonName}</td>
+    <td class="c2 lesson-credit">${lessonCredit}</td>
+    <td class="c3 lesson-grade">
+        <input type="number" min="0" max="20" step="0.1" data-credit="${lessonCredit}">
     </td>
     `;
     lessons.appendChild(row);
