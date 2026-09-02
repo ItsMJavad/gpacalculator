@@ -1,0 +1,319 @@
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Vazirmatn FD;
+    src: url('fonts/webfonts/Vazirmatn-FD-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, rgb(0, 37, 139), aqua, rgb(0, 255, 136));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    margin: 5rem 0;
+    padding: 3rem 3rem;
+    width: max-content;
+    max-width: 90%;
+    background-color: white;
+    box-shadow: 0px 0px 10px gray;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-family: 'Vazirmatn FD';
+    overflow: auto;
+}
+
+h1 {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.description {
+    color: red;
+    font-weight: 600;
+    width: 100%;
+}
+
+#add-lesson-btn {
+    font-family: 'Vazirmatn FD';
+    font-size: .9rem;
+    font-weight: 600;
+    background-color: #ebebeb;
+    border: 1px solid black;
+    outline: none;
+    border-radius: .4rem;
+    padding: .1rem .5rem;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .2rem;
+}
+
+#add-lesson-btn svg {
+    width: 10px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#add-lesson-btn:hover {
+    background-color: #cacaca;
+}
+
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+}
+
+.add-lesson-section {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 2rem 1rem;
+    width: 90%;
+    max-width: max-content;
+    height: auto;
+    background-color: white;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Vazirmatn FD';
+    font-size: 1rem;
+}
+
+.add-row {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .3rem;
+}
+
+.add-row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 1px dashed gray;
+    font-family: 'Vazirmatn FD';
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 .2rem;
+}
+
+.add-row p {
+    white-space: nowrap;
+    width: max-content;
+}
+
+.add-lesson-section button {
+    background-color: #ebebeb;
+    border: 1px solid black;
+    outline: none;
+    font-family: 'Vazirmatn FD';
+    font-size: .9rem;
+    font-weight: 600;
+    border-radius: .4rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.add-lesson-section button:hover {
+    background-color: #cacaca;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    height: max-content;
+    overflow-x: auto;
+    margin: auto;
+    border: 1px solid black;
+    border-bottom: none;
+    direction: rtl;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+td {
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+td:last-child {
+    border-left: none;
+}
+
+table svg {
+    width: 1.3rem;
+    height: auto;
+    margin: auto;
+    cursor: pointer;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.lesson-grade input {
+    font-family: 'Vazirmatn FD';
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-bottom: 1px dashed gray;
+    direction: ltr;
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .4rem;
+}
+
+.result .gpa {
+    font-weight: 600;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .add-buttons {
+        flex-direction: column;
+    }
+}
