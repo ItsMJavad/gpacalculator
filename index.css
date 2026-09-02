@@ -271,7 +271,7 @@ table svg {
     font-size: clamp(.8rem, 3vw, 1rem);
     border: none;
     outline: none;
-    width: 100%;
+    width: clamp(2.4rem, 10vw, 4rem);
     height: 100%;
     text-align: center;
     border-bottom: 1px dashed gray;
